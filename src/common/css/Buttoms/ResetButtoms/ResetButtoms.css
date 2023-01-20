@@ -1,0 +1,14 @@
+.reset {
+    padding: 5px 10px;
+    color: white;
+    background: #d32f2f;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 25%);
+}
+
+.reset:hover {
+    transform: scale(1.05);
+    transition: 150ms;
+}

@@ -1,0 +1,72 @@
+.conteiner {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: center;
+}
+
+.container-grid.rewards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 10px;
+    height: 75vh;
+    align-items: center;
+}
+
+.rewards-item {
+    display: flex;
+    color: white;
+    background: linear-gradient(to right, rgba(103,58,183, 0.2), rgba(81,45,168, 0.2));
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    width: 350px;
+    justify-content: space-evenly;
+}
+
+.rewards-item.disabled {
+    color: rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.reward-header {
+    display: flex;
+    align-items: flex-end;
+    width: 80px;
+    justify-content: space-evenly;
+}
+
+.reward-icon {
+    font-size: 24px;
+}
+
+.reward-title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+}
+
+.reward-questDesc {
+    letter-spacing: 1.1px;
+}
+
+.reward-progress {
+    width: 250px;
+}
+
+.reward-progress.done {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+}
+
+.reward-progress__value {
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    padding: 0 0 10px 0;
+}

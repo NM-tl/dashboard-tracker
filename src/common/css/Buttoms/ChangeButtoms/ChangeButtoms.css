@@ -1,0 +1,29 @@
+.changeButtom {
+    border: none;
+    background: transparent;
+    color: #808080;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+.changeButtom:hover {
+    transform: scale(1.05);
+    transition: 150ms;
+} 
+
+.resetButtom {
+    background: rgb(237, 108, 2);
+    border: 0;
+    color: black;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.resetButtom:hover {
+    transform: scale(1.05);
+    transition: 150ms;
+}

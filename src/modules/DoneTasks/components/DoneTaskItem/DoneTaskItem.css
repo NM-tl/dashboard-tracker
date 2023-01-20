@@ -1,0 +1,7 @@
+.task-item.done {
+    background: linear-gradient(to right, rgba(40,60,134, 0.3), rgba(69,162,71, 0.7));
+}
+
+.task-term.done {
+    color: white;
+}

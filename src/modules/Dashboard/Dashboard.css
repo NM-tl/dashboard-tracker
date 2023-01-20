@@ -1,0 +1,63 @@
+.dashboard {
+    display: flex;
+    width: 100%;
+    padding: 40px 40px;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(15,12,41, 0.3) 0%, rgba(48,43,99, 0.1) 100%);
+    border-radius: 16px;
+    box-shadow: 10px 10px 20px #0d0b0f, -10px -10px 20px #110f15;
+    backdrop-filter: blur(2rem);
+}
+
+.dashboard-sidebar {
+    width: 12.5%;
+    padding: 60px 20px 60px 20px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background: white;
+    background: linear-gradient(90deg, rgba(15,12,41,0.7) 0%, rgba(48,43,99,0.3) 100%);
+    box-shadow: 1px 0px 20px #0d0b0f, 0px 0px 0px #110f15;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.user-avatar {
+    padding: 0 0 20px;
+}
+
+.user-name h4, .user-email h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.dashboard-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    height: 350px;
+    color: #426696;
+}
+
+.dashboard-menu ul, .dashboard-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mainHalf {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+}

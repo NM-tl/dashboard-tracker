@@ -1,0 +1,37 @@
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80px;
+    padding-right: 40px;
+}
+
+.dashboard-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 465px;
+    align-items: center;
+}
+
+.currentTime  {
+    font-size: 20px;
+}
+
+.tasks-counters {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.tasks-counters p {
+    margin: 0;
+}
+
+.task-counter {
+
+}
+
+.user-control:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+}
