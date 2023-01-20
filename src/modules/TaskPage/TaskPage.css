@@ -19,7 +19,6 @@
     width: 60%;
     justify-content: flex-start;
     letter-spacing: 1.1px;
-    line-height: 0;
 }
 
 .task-info {
@@ -47,6 +46,5 @@
     padding: 60px 0;
     flex-direction: column;
     justify-content: flex-start;
-    height: 45vh;
     align-items: baseline;
 }
