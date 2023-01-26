@@ -33,11 +33,6 @@ export default function DoneTaskPage() {
     getTasks();
     }, []);
 
-    // const deleteTask = async (id) => {
-    //   const userDoc = doc(db, "Tasks", id);
-    //   await deleteDoc(userDoc)
-    // };
-
   return (
     <div className='page'>
     <div className='dashboard'>
@@ -86,9 +81,6 @@ export default function DoneTaskPage() {
                 <div className='task-desc'>{description}</div> 
                 <div className='doneTaskPage-controls'>      
                     <button className='btn back-btn' onClick={() => navigate(-1)}>Back</button>
-                    {/* <Link to='/donetasks'>
-                      <button className='btn delete-btn' onClick={deleteTask(task.id)}>Delete Task</button>
-                    </Link>    */}
                 </div>
               </div>
             );

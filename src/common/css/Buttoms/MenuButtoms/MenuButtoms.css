@@ -8,3 +8,15 @@
     justify-content: space-around;
     align-items: center;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {    
+    .menu-btn {
+      font-size: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .menu-btn {
+    font-size: 12px;
+  }
+}

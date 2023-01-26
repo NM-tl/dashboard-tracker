@@ -1,8 +1,8 @@
 .container.profile {
   display: flex;
-    justify-content: unset !important;
+    justify-content: unset;
     color: white;
-    width: 35% !important;
+    width: 35%;
 }
 
 .user-info {
@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .user-info__avatar {
@@ -50,4 +51,73 @@
     border: 0;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.container.profile {
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+  }
+  
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .container.profile {
+        padding: unset;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .user-info {
+        padding: 0 0 0 10px;
+        width: unset;
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .user-info > div {
+        justify-content: center;
+    }
+
+    .avatar {
+        width: 84px;
+        height: 84px;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {        
+    .container.profile {
+        width: 90%;
+        padding: 0 0 0 40px;
+    }
+
+    .user-info {
+        padding: unset;
+        width: 60%;
+    }
+
+    .avatar {
+        width: 64px;
+        height: 64px;
+    }
 }

@@ -15,7 +15,7 @@
 }
 
 .dashboard-sidebar {
-    width: 12.5%;
+    width: 14%;
     padding: 60px 20px 60px 20px;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
@@ -60,4 +60,76 @@
     flex-direction: column;
     width: 100%;
     padding: 10px 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .dashboard {
+    padding: unset;
+  }
+
+  .dashboard-wrapper {
+    width: unset;
+  }
+
+  .dashboard-sidebar {
+    width: 31%;
+    padding: 25px 0px;
+  }
+
+  .dashboard-wrapper {
+    justify-content: flex-end;
+  }
+
+  .mainHalf {
+      padding: 25px 0;
+  }
+
+  .user-name h4, .user-email h4 {
+  font-size: 10px;
+  }
+}  
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .dashboard {
+    padding: 5px 5px;
+}
+
+.dashboard-sidebar {
+  padding: 25px 0px;
+}
+
+.dashboard-sidebar {
+  width: 30%;
+  padding: 25px 0px;
+}
+
+.user-name h4, .user-email h4 {
+  font-size: 10px;
+}
+
+.mainHalf {
+    padding: 25px 0;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+.dashboard {
+    padding: 5px 5px;
+}
+
+.dashboard-sidebar {
+    width: 22%;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1300px){
+    .dashboard-sidebar {
+      width: 19%;
+    } 
+  }
+
+@media (min-width: 320px) and (max-width: 1000px) {
+  .dashboard-sidebar {
+    height: 100vh;
+  }
 }

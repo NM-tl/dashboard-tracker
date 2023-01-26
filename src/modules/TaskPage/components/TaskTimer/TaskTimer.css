@@ -3,6 +3,7 @@
     align-items: center;
     width: 38%;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .timer-container {
@@ -44,5 +45,17 @@
 .timer-container.text.start::after {
     content: "🟢";
     margin-left: 5px;
+}
+
+@media (max-width: 610px) {
+    .task-timer__container {
+        width: unset;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+    .task-timer {
+        width: unset;
+    }    
 }
 

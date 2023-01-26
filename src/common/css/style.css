@@ -1,7 +1,6 @@
 .page {
     display: flex;
     width: 100%;
-    height: 100vh;
     background: rgb(56,58,75);
     background: radial-gradient(circle, rgba(56,58,75,1) 0%, rgba(23,24,31,1) 100%);
 }
@@ -18,8 +17,42 @@
     pointer-events: none;
   }
   
-  @media (prefers-reduced-motion: no-preference) {
-    .logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: App-logo-spin infinite 20s linear;
   }
+}
+
+/* Adaptive */
+@media (min-width: 481px) and (max-width: 767px) {
+  
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+  
+  .wrapper {
+    padding: 0 20px;
+  }
+  
+  .dashboard {
+    padding: 5px 5px;
+  }
+
+  .dashboard-sidebar {
+    width: 22%;
+  }
+
+  .dashboard-header {
+    padding-right: 30px;
+  }
+
+  .tasks-list {
+    padding: 20px 0 0 0;
+  }
+ }
+
+@media (min-width: 1420px) {
+  .page {
+    height: 100vh;
+  } 
+}

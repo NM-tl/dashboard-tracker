@@ -10,7 +10,7 @@
 .task-header {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -47,4 +47,35 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: baseline;
+}
+
+@media (min-width: 320px) and (max-width: 991px) {  
+    .task{
+        padding: 20px;
+        flex-direction: flex-start;
+        height: unset;
+    }
+
+    .task-date {
+        font-size: 18px;
+    }
+
+    .task-info {
+        width: 60%;
+    }
+
+    .task-title {
+        font-size: 8px;
+        width: unset;
+    }
+
+    .task-desc {
+        padding: 60px 0 60px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+    .task-header {
+        flex-direction: column-reverse;
+    }    
 }

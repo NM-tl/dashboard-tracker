@@ -27,11 +27,29 @@
     margin: 0;
 }
 
-.task-counter {
-
-}
-
 .user-control:hover {
     transform: scale(1.1);
     transition: 200ms;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {  
+    .dashboard-header {
+        padding: unset;
+        justify-content: center;
+        height: unset;
+    }
+
+    .dashboard-header__wrapper {
+        align-items: center;
+        flex-direction: column-reverse;
+        height: 115px;
+        justify-content: space-between;
+        width: unset;
+    }   
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    .dashboard-header {
+        padding-right: 30px;
+    }
 }

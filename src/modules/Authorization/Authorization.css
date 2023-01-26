@@ -7,6 +7,7 @@
     backdrop-filter: blur(5px);
     align-items: center;
     color: white;
+    flex-wrap: wrap;
 }
 
 .auth-side {
@@ -64,3 +65,77 @@
 .css-1aquho2-MuiTabs-indicator {
     background-color: rgba(15,12,41, 0.9) !important;
 }
+
+@media (min-width: 320px) and (max-width: 1420px) {
+    .wrapper {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .auth {
+        justify-content: center;
+        align-content: center;
+    }
+
+    .auth-side {
+        padding: 20px;
+    }
+
+    .auth-side h1 {
+        margin: unset;
+        font-size: 20px;
+    }
+
+    .form-side {
+        border-bottom-right-radius: unset;
+        border-top-right-radius: unset;
+        padding: 0px 50px;
+        width: 100%;
+    }
+
+    .form-side h2{
+        font-size: 20px;
+    }
+
+    .css-heg063-MuiTabs-flexContainer {
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1399px) {
+    .auth {
+        flex-wrap: nowrap;
+    }
+}
+
+.auth-side h1 {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

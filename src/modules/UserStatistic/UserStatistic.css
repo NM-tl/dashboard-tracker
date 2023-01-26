@@ -83,3 +83,93 @@
     align-items: center;
     height: 10vh;
 }
+
+.statistic-box.per-week {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.statistic-box.tasks-counter, .statistic-box.user-rating {
+    -webkit-animation: scale-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+@media (max-width: 669px) {
+    svg.recharts-surface {
+        width: 350px !important;
+    }
+
+    .recharts-wrapper {
+        width: 350px !important;
+    } 
+}
+
+@media (min-width: 670px) and (max-width: 991px) {
+    svg.recharts-surface {
+        width: 515px !important;
+    }
+
+    .recharts-wrapper {
+        width: 515px !important;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 1200px) {   
+    .container{
+        padding: 20px 10px;
+    }  
+
+    .container-grid.statistic{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .statistic-title {
+        padding: 0 10px;
+    }
+}
+

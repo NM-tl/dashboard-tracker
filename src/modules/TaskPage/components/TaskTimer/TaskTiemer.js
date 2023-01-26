@@ -26,9 +26,6 @@ export default function TaskTiemer(props) {
   let localMinutes = localStorage.getItem('minutes');
   let localSeconds = localStorage.getItem('seconds');
 
-  console.log(`State: ${hours}:${minutes}:${seconds}`);
-  console.log(`Local: ${localHours}:${localMinutes}:${localSeconds}`);
-
   const toggleTimer = () => {
     setIsActive(!isActive);
     setContent(!isActive ? 'stop' : 'start');

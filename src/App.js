@@ -16,11 +16,30 @@ import UserStatistic from './modules/UserStatistic/UserStatistic';
 import UserRewards from './modules/UserRewards/UserRewards';
 import DoneTaskPage from './modules/DoneTaskPage/DoneTaskPage';
 import { AuthContextProvider } from './context/AuthContext'
+import { useState, useEffect } from 'react';
+import Loader from './common/components/Loader/Loader';
+import ErrorPage from './common/components/ErrorPage/ErrorPage';
 
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  
+  // if (spinner) {
+  //   setTimeout(() => {
+  //     spinner.style.display = "none";
+  //     setLoading(false);
+  //   }, 2000);
+  // }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
+
   return (
-    
+    !loading ? 
       <div className="App">
         <AuthContextProvider>
           <Router>
@@ -35,11 +54,12 @@ function App() {
               <Route exact path="/donetasks" element={<DoneTasks />} />
               <Route exact path="/donetask/:id" element={<DoneTaskPage />} />
               <Route path="*" element={<Navigate to="/authorization" replace />} />
+              <Route path="/error" element={<ErrorPage />} />
             </Routes>
           </Router>
         </AuthContextProvider>
-      </div>
-    
+      </div> :
+      <Loader />
   );
 }
 

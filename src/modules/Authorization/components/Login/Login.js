@@ -5,6 +5,7 @@ import {
 } from 'firebase/auth';
 import { auth } from '../../../../firebase-config';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'
 import '../../../../common/css/Buttoms/Buttoms.css'
 import '../../../../common/css/FormInputs/FormInputs.css';
 import '../../../../common/css/Buttoms/EnterButtoms/EnterButtoms.css';
@@ -57,20 +58,23 @@ export default function Login() {
             setLoginEmail(e.target.value)}}
           className='enter-form__input'
         />
-        <input
-          placeholder="Password..."
-          type={isShown ? "text" : "password"}
-          onChange={(e) => {
-            setLoginPassword(e.target.value)}}
-          className='enter-form__input show'
-        />
-        <button 
-          onClick={togglePassword} 
-          className={isShown ? 
-          'show-btn' : 
-          'hide-btn'}
-          >{ !isShown ? <VisibilityIcon /> : <VisibilityOffIcon />}</button>
-        <button 
+          <div className='row'>
+            <input
+            placeholder="Password..."
+            type={isShown ? "text" : "password"}
+            onChange={(e) => {
+              setLoginPassword(e.target.value)}}
+            className='enter-form__input show'
+            />
+            <button 
+            id='show'
+            onClick={togglePassword} 
+            className={isShown ? 
+            'show-btn' : 
+            'hide-btn'}
+            >{ !isShown ? <VisibilityIcon /> : <VisibilityOffIcon />}</button>
+          </div>
+          <button 
           onClick={login}
           className='btn enter-form__btn'
           > Login</button>

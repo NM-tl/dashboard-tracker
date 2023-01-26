@@ -1,6 +1,13 @@
 .task-controls {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
+@media (max-width: 610px) {
+    .task-controls {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}

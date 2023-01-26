@@ -17,6 +17,8 @@ export default function RewardCard() {
     const { user } = UserAuth();
     const [doneTasks, setDoneTasks] = useState([]);
 
+    
+
     useEffect(() => {
         const getTasks = async() => {
             const data = await getDocs(tasksCollectionRef);
@@ -26,6 +28,8 @@ export default function RewardCard() {
     }, []);
 
     let counter = doneTasks.filter((task) => task.status === true && task.uid === user.uid).length;
+
+    console.log(counter)
 
     const sortByValue = (value) => {
         return (a, b) => a[value] > b[value] ? 1 : -1;

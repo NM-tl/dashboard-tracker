@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { auth } from '../../../../firebase-config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import './Register.css'
 import '../../../../common/css/FormInputs/FormInputs.css';
 import '../../../../common/css/Buttoms/TogglePasswordButtoms/TogglePasswordButtoms.css';
 
@@ -38,29 +39,32 @@ export default function Register() {
 
   return (
     <div className='enter-form'>
-    <input 
-      placeholder="Email..." 
-      onChange={(e) => {
-        setRegisterEmail(e.target.value)}}
-      className='enter-form__input'
-    />
-    <input
-      placeholder="Password..."
-      type={isShown ? "text" : "password"}
-      onChange={(e) => {
-        setRegisterPassword(e.target.value)}}
-      className='enter-form__input'
-    />
-    <button 
+      <input 
+        placeholder="Email..." 
+        onChange={(e) => {
+          setRegisterEmail(e.target.value)}}
+        className='enter-form__input'
+      />
+      <div className='row'>
+        <input
+          placeholder="Password..."
+          type={isShown ? "text" : "password"}
+          onChange={(e) => {
+            setRegisterPassword(e.target.value)}}
+          className='enter-form__input'
+        />
+          <button 
+          id='show'
           onClick={togglePassword} 
           className={isShown ? 
           'show-btn' : 
           'hide-btn'}
           >{ !isShown ? <VisibilityIcon /> : <VisibilityOffIcon />}</button>
-    <button 
-      onClick={register}
-      className='btn enter-form__btn'
-      >Submit</button>
+      </div>
+      <button 
+        onClick={register}
+        className='btn enter-form__btn'
+        >Submit</button>            
   </div>
   )
 }

@@ -10,3 +10,17 @@
 input[type="text"].enter-form__input.show {
     padding: 12px 10px;
 }
+
+.css-heg063-MuiTabs-flexContainer {
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 12px;
+    width: 100%;
+    justify-content: space-between;
+    letter-spacing: 1.2px;
+}
