@@ -20,7 +20,7 @@ export default function PriorityCounters() {
         setTastks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getTasks();
-  }, []);
+  }, [tasksCollectionRef]);
   
 
     const counterLow = tasks.filter((task) => task.status === false && task.uid === user.uid && task.priority === 'Low').length;

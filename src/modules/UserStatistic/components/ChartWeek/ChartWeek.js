@@ -58,24 +58,18 @@ export default function ChartWeek() {
 
   const addValuesToChart = () => {
     tasks.filter((task) => {
-      data.some(day => {
+      return data.some(day => {
         if(day.number === task.dayValue && task.status === true && task.uid === user.uid) {
           day.pv += 1;    
         } else if (day.number === task.dayValue && task.status === !true && task.uid === user.uid) {         
           day.uv += 1;
         }
+        return day;
       })      
     })
   };
 
   addValuesToChart();
-
-  const resetHandler = () => {
-    data.map(day => {
-      day.pv = 0;
-      day.uv = 0;
-    });
-  }
 
   return (
     <>
@@ -84,7 +78,6 @@ export default function ChartWeek() {
               <div>Done tasks per week: {doneCounter}<ShowChartIcon style={{color: '#66bb6a'}} /> </div>
               <div>Underdone tasks per week: {underDoneCounter}<ShowChartIcon style={{color: '#ed6c02'}} /></div>
             </div>
-            <button className='reset' onClick={resetHandler}>Reset</button>
         </div>
         <AreaChart width={700} height={300} data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
         <defs>

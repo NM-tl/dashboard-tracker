@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './DateDeadline.css'
+import './DateDeadline.css';
 
 export default function DateDeadline(props) {
 
@@ -10,20 +10,21 @@ export default function DateDeadline(props) {
 
     const deadline = props.date;
 
-    const calcTime = () => {
-
-        const time = Date.parse(deadline) < Date.now() ? '0' : Date.parse(deadline) - Date.now();
-
-        setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-        setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
-        setMinutes(Math.floor((time / 1000 / 60) % 60));
-        setSeconds(Math.floor((time / 1000) % 60));
-    }
-
     useEffect(() => {
+
+        const calcTime = () => {
+
+            const time = Date.parse(deadline) < Date.now() ? '0' : Date.parse(deadline) - Date.now();
+    
+            setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+            setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+            setMinutes(Math.floor((time / 1000 / 60) % 60));
+            setSeconds(Math.floor((time / 1000) % 60));
+        }
+
         const interval = setInterval(() => calcTime(deadline), 1000);
         return () => clearInterval(interval);
-    }, []);
+    }, [deadline]);
 
 
   return (

@@ -25,7 +25,7 @@ export default function RewardCard() {
             setDoneTasks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         };
         getTasks();
-    }, []);
+    }, [tasksCollectionRef]);
 
     let counter = doneTasks.filter((task) => task.status === true && task.uid === user.uid).length;
 

@@ -10,7 +10,7 @@ import { UserAuth } from '../../../../context/AuthContext';
 
 export default function DashboardHeader() {
 
-  const { logOut, user } = UserAuth();  
+  const { logOut } = UserAuth();  
   const navigate = useNavigate();
   
   const handleSignOut = async () => {

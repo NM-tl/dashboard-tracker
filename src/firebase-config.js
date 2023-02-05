@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
 import { getAuth, updateProfile, onAuthStateChanged  } from 'firebase/auth';
-import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { getDownloadURL, getStorage, ref } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCzCM8QJm1U-6-3LTq725uITuo1qqJ3-1Q",
