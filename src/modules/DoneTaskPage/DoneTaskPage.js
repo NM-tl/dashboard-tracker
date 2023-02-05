@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import DashboardHeader from '../Dashboard/components/DashboardHeader/DashboardHeader';
 import DashboardSidebar from '../Dashboard/components/DashboardSidebar/DashboardSidebar';
 import LowChip from '../../common/components/Chips/LowChip';
@@ -7,13 +7,10 @@ import MediumChip from '../../common/components/Chips/MediumChip';
 import HighChip from '../../common/components/Chips/HighChip';
 import './DoneTaskPage.css'
 
-
 import { db } from '../../firebase-config';
 import {
   collection,
   getDocs,
-  deleteDoc,
-  doc,
 } from "firebase/firestore";
 
 export default function DoneTaskPage() {
@@ -31,7 +28,7 @@ export default function DoneTaskPage() {
     };
 
     getTasks();
-    }, []);
+    }, [tasksCollectionRef]);
 
   return (
     <div className='page'>

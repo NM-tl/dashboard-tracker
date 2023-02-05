@@ -24,13 +24,6 @@ import ErrorPage from './common/components/ErrorPage/ErrorPage';
 function App() {
   const [loading, setLoading] = useState(true);
   
-  // if (spinner) {
-  //   setTimeout(() => {
-  //     spinner.style.display = "none";
-  //     setLoading(false);
-  //   }, 2000);
-  // }
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);

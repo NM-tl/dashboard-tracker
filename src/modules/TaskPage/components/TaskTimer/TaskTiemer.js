@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useReducer } from 'react';
+import React, { useEffect, useState } from 'react';
 import './TaskTimer.css';
 import { db } from '../../../../firebase-config';
 import {
@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function TaskTiemer(props) {
 
-  const { status, id, dayValue, timeMark } = props.value.value;
+  const { status, id, dayValue } = props.value.value;
   
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -79,7 +79,7 @@ export default function TaskTiemer(props) {
     }
 
     return () => clearInterval(interval);
-  }, [isActive, seconds, minutes, hours]
+  }, [isActive, seconds, minutes, hours, id]
   )   
   
   return (
@@ -99,7 +99,6 @@ export default function TaskTiemer(props) {
               }}>Complite
             </button>          
         </div>
-    </div>
-    
+    </div> 
   )
 }

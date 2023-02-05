@@ -19,7 +19,7 @@ export default function SignInWithGoogleBtn() {
     if (user != null) {
       navigate('/dashboard');
     }
-  }, [user]);
+  }, [user, navigate]);
 
   return (
     <>

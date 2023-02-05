@@ -24,7 +24,7 @@ export default function Register() {
         registerEmail,
         registerPassword
       )
-      alert('Thank you for registration👋');
+      alert(`${user}Thank you for registration👋`);
       e.preventDefault();
       alert('Here is your dashboard!😉');
       navigate('/dashboard')

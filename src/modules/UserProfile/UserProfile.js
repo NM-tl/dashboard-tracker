@@ -59,8 +59,6 @@ export default function UserProfile() {
         }
     }, [user])
 
-    console.log(user)
-
   return (
     <div className='page'>
         <div className='dashboard'>

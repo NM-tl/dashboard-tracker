@@ -23,7 +23,6 @@ export default function AddTaskPage() {
     const [addPriority, setAddPriority] = useState ('Medium');
     const [addDate, setAddDate] = useState (currDate);
     const [addDescription, setAddDescription] = useState (''); 
-    const [addDayValue, setAddDayValue] = useState(currDayVal); 
 
     const { user } = UserAuth();
 
@@ -41,7 +40,7 @@ export default function AddTaskPage() {
                 uid: user.uid,
                 timeMark: '00:00:00',
                 dayDone: '',
-                dayValue: addDayValue,
+                dayValue: currDayVal,
             });
             navigate('/dashboard');
         } catch(error) {

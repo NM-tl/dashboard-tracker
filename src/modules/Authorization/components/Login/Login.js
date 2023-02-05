@@ -38,7 +38,7 @@ export default function Login() {
         loginPassword
       )
       e.preventDefault();
-      alert('Welcome to your Dashboard👋');
+      alert(`${user} Welcome to your Dashboard👋`);
       navigate('/dashboard')
     } catch (error) {
       alert(error.message)
@@ -48,6 +48,8 @@ export default function Login() {
   const togglePassword = () => {
     setIsSHown((isShown) => !isShown);
   };
+
+  console.log(user)
 
   return (
     <div>

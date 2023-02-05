@@ -25,7 +25,7 @@ export default function UserRewards() {
         };
     
         getRewards();
-    }, []);
+    }, [rewardsCollectionRef]);
 
     const rewardsData = rewards;
 

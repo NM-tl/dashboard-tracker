@@ -26,7 +26,7 @@ export default function DoneTaskItem() {
             setDoneTasks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         };
         getTasks();
-    }, []);   
+    }, [tasksCollectionRef]);   
   
   return (
     <>

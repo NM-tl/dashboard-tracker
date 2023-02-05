@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import { taskCounter } from '../../UserStatistic';
 import { UserAuth } from '../../../../context/AuthContext';
@@ -10,72 +10,7 @@ export default function ChartWeek() {
 
   let { doneCounter, underDoneCounter, tasks } = useContext(taskCounter);
   const { user } = UserAuth();
-
-  // const [week, setWeek] = useState([
-  //   {
-  //     name: 'Monday',
-  //     uv: 0,
-  //     pv: 0, 
-  //     number: 1,
-  //   },
-  //   {
-  //     name: 'Tuesday',
-  //     uv: 0,
-  //     pv: 0,
-  //     number: 2,
-  //   },
-  //   {
-  //     name: 'Wednesday',
-  //     uv: 0,
-  //     pv: 0,
-  //     number: 3,
-  //   },
-  //   {
-  //     name: 'Thursday',
-  //     uv: 0,
-  //     pv: 0,
-  //     number: 4,
-  //   },
-  //   {
-  //     name: 'Friday',
-  //     uv: 0,
-  //     pv: 0,
-  //     number: 5,
-  //   },
-  //   {
-  //     name: 'Saturday',
-  //     uv: 0,
-  //     pv: 0,
-  //     number: 6,
-  //   },
-  //   {
-  //     name: 'Sunday',
-  //     uv: 0,
-  //     pv: 0,
-  //     number: 0,
-  //   },
-  // ]);
-
-  // useEffect(() => {
-  //     tasks.filter((task) => {
-  //       let valuePv;
-  //       let valueUv;
-
-  //       week.some(day => {
-  //         if(day.number === task.dayValue && task.status === true && task.uid === user.uid) {
-  //           valuePv += 1;
-  //           setWeek(day.pv = valuePv);   
-  //         } else if (day.number === task.dayValue && task.status === !true && task.uid === user.uid) {         
-  //           valueUv += 1
-  //           setWeek(day.uv = valueUv);
-  //         }
-  //       });  
-  //     });
-  // }, [week]);
-
-  // console.log(week);
-
-
+  
   const data = [
     {
       name: 'Monday',

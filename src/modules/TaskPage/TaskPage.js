@@ -28,7 +28,7 @@ export default function TaskPage() {
     };
 
     getTasks();
-  }, []);
+  }, [tasksCollectionRef]);
 
   return (
     <div className='page'>

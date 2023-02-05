@@ -67,15 +67,12 @@ export default function Authorization() {
           </div>
           <div className='form-side'>
             <h2>Autherization form</h2>
-
-
             <Box sx={{ width: '100%' }}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs 
                   value={value} 
                   onChange={handleChange} 
-                  aria-label="basic tabs example"
-                  
+                  aria-label="basic tabs example"  
                 >
                   <Tab label="Login" {...a11yProps(0)} />
                   <Tab label="Register" {...a11yProps(1)} />
@@ -87,8 +84,7 @@ export default function Authorization() {
               <TabPanel value={value} index={1}>
                 <Register />
               </TabPanel>
-            </Box>
-            
+            </Box>     
           </div>
         </div>
       </div>
